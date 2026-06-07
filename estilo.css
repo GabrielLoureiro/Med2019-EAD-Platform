@@ -1,118 +1,144 @@
-*{
+* {
     box-sizing: border-box;
-    
+    margin: 0;
+    padding: 0;
 }
 
-body{
+body {
+    font-family: Arial, sans-serif;
     display: flex;
     flex-direction: column;
-    
-
+    min-height: 100vh;
 }
 
-h1{
+h1 {
     background-color: black;
     color: white;
     text-align: center;
-    height: 60px;
-    width: 0 auto;
     font-size: 30px;
-    margin-bottom: 0px;
-    margin-top: 0px;
     padding-top: 15px;
-   
-    
+    padding-bottom: 5px;
 }
 
-.menu{
+h1 a {
+    color: white;
+    text-decoration: none;
+}
+
+.menu {
     display: flex;
     justify-content: center;
-    background-color:black;
-       
-}
-
-.menu ul{
-    padding: 0px;
-    margin: 0px;
     background-color: black;
+    padding-bottom: 15px;
+}
+
+.menu ul {
     list-style: none;
-    color: white;
-    
-    
-}
-
-.menu ul li{
-    display: inline;
-    padding: 10px 10px;
-    text-transform: uppercase;
-        
-}
-
-
-a{
-    color: white;
-    
-}
-
-
-.conteudo{
     display: flex;
-    height: 800px;
-    width: 0 auto;
-    background-image:url(bg.jpg);
+    gap: 20px;
+}
+
+.menu ul li a {
+    color: white;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 14px;
+}
+
+.menu ul li a:hover {
+    text-decoration: underline;
+}
+
+.conteudo {
+    display: flex;
+    flex-direction: column;
+    min-height: 800px;
+    width: 100%;
+    background-image: url(bg.jpg);
     background-repeat: no-repeat;
     background-size: cover;
-    color: white;
-    padding-left: 20px;
-    
-}
-.informacao{
-    flex-direction: column;
-    text-align: center;
+    background-position: center;
+    padding: 40px 20px;
 }
 
+/* Alinha os blocos de semanas lado a lado */
+.informacao {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    justify-content: center;
+    width: 100%;
+    margin-top: 20px;
+}
 
-.semana1{
+/* Une o texto da semana verticalmente com a sua cápsula */
+.card-semana {
     display: flex;
     flex-direction: column;
-    flex-wrap: wrap;
-    margin: 2px;
+    align-items: center;
+    gap: 10px;
+}
+
+/* Deixa o título da semana visível e destacado */
+.titulo-semana {
+    font-size: 16px;
+    font-weight: bold;
+    color: white; /* Alterado para branco para destacar bem sobre a imagem de fundo bg.jpg */
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.8); /* Sombra para garantir leitura em fundos claros */
+    text-transform: uppercase;
+}
+
+/* Cápsula cinza horizontal */
+.semana1 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
     background-color: #ad9d9d;
-    border-radius: 50px 50px; 
-    height: 65px;
-    width: 150px;
-    text-align: center;  
-    
+    border-radius: 50px;
+    height: 85px;
+    width: 180px;
+    padding: 5px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.3);
 }
 
-.teste{
-    position: relative;
-    margin: 1px;
-    border-radius: 50px;
+/* Bolinha 1 (Branca) */
+.teste {
     width: 70px;
     height: 70px;
+    border-radius: 50%;
     background-color: white;
-    color: black
-    
+    color: black;
+    font-size: 12px;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
 }
 
-.teste2{
-    position: relative;
-    margin: 1px;
-    border-radius: 50px;
+/* Bolinha 2 (Azul) */
+.teste2 {
     width: 70px;
     height: 70px;
+    border-radius: 50%;
     background-color: rgb(53, 98, 219);
-    color: black;
+    color: white;
+    font-size: 12px;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
 }
 
-.rodape{
+.rodape {
     display: flex;
     background-color: rgb(230, 204, 204);
-    margin-top: 1px;
-    margin-bottom: 1px;
+    padding: 15px 0;
     text-align: center;
-    font-size: 20px;
+    font-size: 16px;
     text-transform: uppercase;
     justify-content: center;
+    color: #333;
 }
